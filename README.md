@@ -1,4 +1,4 @@
-# 🧠 JavaScript `var` vs `let` vs `const` – Interview Notes
+# 🧠 JavaScript `var` vs `let` vs `const` – Important Notes
 
 This repository contains clear, commented notes with examples to understand the differences between `var`, `let`, and `const` in JavaScript. It's written with interview preparation in mind.
 
