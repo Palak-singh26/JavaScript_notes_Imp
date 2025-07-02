@@ -1,249 +1,120 @@
-// map, filter and reduce
-// 1.map
-// map array is use to create new array by applying a function to each one  of the element of the first array
-// example
-// const nums =  [1,2,3,4];
-
-// const multiplythree = nums.map((nums,i,arr)=>{
-//     return nums * 3 ;
-// });
-
-// console.log(multiplythree); it will perform like this 1*3+0,2*3+1
-
-
-//********************************************************************************************************************* */
-
-// 2.filter
-
-// const nums = [1,2,3,4];
-
-// const morethantwo = nums.filter((nums,)=>{
-//       return nums > 2;
-// })
-// console.log(morethantwo);  almost similar to map but function return true to keep the element and false to not keep element
-
-
-
-//********************************************************************************************************************* */
-
-
-// 3.reduce
-
-// const nums = [1,2,3,4];
-
-// const sum = nums.reduce((acc,curr,i,arr)=>{
-//       return acc + curr;
-// },0);
-// console.log(sum);  
-
-
-
-//********************************************************************************************************************* */
-
-
-// 4.polyfill Map()
-
-// Array.prototype.mymap=function (cb) {
-//     let temp =[];
-//     for(let i =0 ; i < this.length;i++){
-//         temp.push(cb(this[i],i,this));
-//     }
-//     return temp;
-// };
-
-//  const nums =  [1,2,3,4];
-
-// const multiplythree = nums.mymap((nums,i,arr)=>{
-//     return nums * 3 ;
-// });
-
-// console.log(multiplythree); 
-// map give each and every value and modidfies it according to the condition of the callback 
-
-
-//********************************************************************************************************************* */
-
-
-
-
-// 5.polyfill for fiter
-
-// Array.prototype.myFilter=function (cb) {
-//     let temp =[];
-//     for(let i = 0 ; i < this.length;i++){
-//         if(cb(this[i],i,this)) temp.push(this[i]);
-//     }
-//     return temp;
-// };
-
-//  const nums = [1,2,3,4];
-
-// const morethantwo = nums.myFilter((nums,)=>{
-//       return nums > 2;
-// })
-// console.log(morethantwo); 
-//  but filter returns only those values which satify the condition of callback not each and every element in the form of true and false
-
-
-//********************************************************************************************************************* */
-
-
-// 6.polyfill reduce 
-
-
-// Array.prototype.myReduce=function (cb , initialValue) {
-//     var accumulator = initialValue;
-
-//     for(let i = 0 ; i < this.length;i++){
-//         accumulator = accumulator?cb(accumulator,this[i],i,this):this[i]
-//     }
-//     return accumulator;
-// };
-
-// const nums = [1,2,3,4];
-
-// const sum = nums.myReduce((acc,curr,i,arr)=>{
-//       return acc + curr;
-// },0);
-// console.log(sum);  
-//  if we fails to give initialvalue then accumulator takes first element of array and the current value is assigned the second element ofthe array so we're going to check over here
-
-
-//********************************************************************************************************************* */
-
-
-
-// 7. differ map vs Foreach 
-
-// const arr = [2,5,3,4,7];
-
-// const mapresult = arr.map((ar)=>{
-//     return ar + 2; })
-// }) we can modidfies the map  map return the value but foreach not return any thing both have differ method or function to perform/
-// 
-
-
-// const foreachresult = arr.forEach((ar,i)=>{
-//     arr[i] = ar + 3
-// });
-// but foreach not return any thing both have differ method or function to perform
-// console.log(mapresult,foreachresult,arr); 
-// i make chnages in foreach and gic CL arr
-// output like map ====  4,7,5,6,9  
-// its modifies arr values ==== 5,8,6,7,10
-
-
-
-
-//********************************************************************************************************************* */
-
-//********************************************************************************************************************* */
-
-// output base questions
-// 1.return only name of students in captial
-
-// let students =[
-//     {name:"piyush",rolnumber:31,marks:80},
-//     {name:"meha",rolnumber:34,marks:60},
-//     {name:"rani",rolnumber:15,marks:75},
-//     {name:"piyu",rolnumber:45,marks:65},
-// ];
-// // let use map 
-
-// const  names = students.map(stu=>stu.name.toUpperCase());
-// // let names = [];
-// // for(let i = 0 ; i < students.length;i++){
-// //             names.push(students[i].name.toUpperCase());
-// // } this is normal example
-// console.log(names);
-
-
-
-///////////////////////////////////////////////////////////////////////
-
-
-// 2.return only details of those students who scored more than 60
-
-// let students =[
-//     {name:"piyush",rolnumber:31,marks:80},
-//     {name:"meha",rolnumber:34,marks:60},
-//     {name:"rani",rolnumber:15,marks:75},
-//     {name:"piyu",rolnumber:45,marks:65},
-// ];
-
-// const details = students.filter((stu)=>stu.marks > 60);
-// console.log(details);
-
-
-//////////////////////////////////////////////////////////////////
-
-
-
-// 3. more than 60 marks and rollnumber grater than 15
-
-// let students =[
-//     {name:"piyush",rolnumber:31,marks:80},
-//     {name:"meha",rolnumber:34,marks:60},
-//     {name:"rani",rolnumber:15,marks:75},
-//     {name:"piyu",rolnumber:45,marks:65},
-// ];
-
-// const details = students.filter((stu)=>stu.marks > 60 && stu.rolnumber > 15);
-// console.log(details);/
-
-
-///////////////////////////////////////////////////////////
-
-
-// 4.sum of marks of all students
-
-
-// let students =[
-//     {name:"piyush",rolnumber:31,marks:80},
-//     {name:"meha",rolnumber:34,marks:60},
-//     {name:"rani",rolnumber:15,marks:75},
-//     {name:"piyu",rolnumber:45,marks:65},
-// ];
-
-// const sum = students.reduce((acc,curr,)=> acc + curr.marks ,0);
-// console.log(sum);  
-
-
-//////////////////////////////////////////////////////////////////////////
-
-// 5.return only names of students who only scored more than students
-
-// let students =[
-//     {name:"piyush",rolnumber:31,marks:80},
-//     {name:"meha",rolnumber:34,marks:60},
-//     {name:"rani",rolnumber:15,marks:75},
-//     {name:"piyu",rolnumber:45,marks:65},
-// ];
-
-// const  names = students.map(stu=>stu.name.toUpperCase());
-
-// const details = students.filter((stu)=>stu.marks > 60).map((stu)=>stu.name);
-// console.log(details);
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////
-
-// 6.return total marks of students with marks grater than 60 after 20 marks have been added to those who scored less than 60 
-
-let students =[
-    {name:"piyush",rolnumber:31,marks:80},
-    {name:"meha",rolnumber:34,marks:60},
-    {name:"rani",rolnumber:15,marks:55},
-    {name:"piyu",rolnumber:45,marks:50},
+// JavaScript Array Methods: map, filter, reduce
+
+// 1. map ----------------------------------------------------
+// Creates a new array by applying a function to every element.
+const nums = [1, 2, 3, 4];
+
+const multipliedByThree = nums.map((n, i, arr) => n * 3);
+console.log( multipliedByThree); // [3, 6, 9, 12]
+
+
+// 2. filter -------------------------------------------------
+// Keeps elements that satisfy the callback condition.
+const moreThanTwo = nums.filter(n => n > 2);
+console.log( moreThanTwo); // [3, 4]
+
+
+// 3. reduce -------------------------------------------------
+// Reduces the array to a single value (sum in this example).
+const sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+
+
+// 4. Polyfill for map --------------------------------------
+Array.prototype.myMap = function (cb) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(cb(this[i], i, this));
+  }
+  return result;
+};
+console.log(nums.myMap(n => n * 3)); // [3, 6, 9, 12]
+
+
+// 5. Polyfill for filter -----------------------------------
+Array.prototype.myFilter = function (cb) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i], i, this)) result.push(this[i]);
+  }
+  return result;
+};
+console.log('5. myFilter →', nums.myFilter(n => n > 2)); // [3, 4]
+
+
+// 6. Polyfill for reduce -----------------------------------
+Array.prototype.myReduce = function (cb, initialValue) {
+  let accumulator = initialValue;
+  for (let i = 0; i < this.length; i++) {
+    accumulator =
+      accumulator !== undefined
+        ? cb(accumulator, this[i], i, this)
+        : this[i];
+  }
+  return accumulator;
+};
+console.log(
+  '6. myReduce →',
+  nums.myReduce((acc, curr) => acc + curr, 0)
+); // 10
+
+
+// 7. map vs forEach ----------------------------------------
+const arr = [2, 5, 3, 4, 7];
+
+const mapResult = arr.map(n => n + 2); // returns new array
+
+arr.forEach((n, i) => {
+  arr[i] = n + 3;                      // mutates original array
+});
+
+console.log('map vs forEach ', mapResult, arr);
+// mapResult: [4, 7, 5, 6, 9]
+// arr after forEach: [5, 8, 6, 7, 10]
+
+
+// 8. Practice problems -------------------------------------
+const students = [
+  { name: 'piyush', roll: 31, marks: 80 },
+  { name: 'meha',  roll: 34, marks: 60 },
+  { name: 'rani',  roll: 15, marks: 75 },
+  { name: 'piyu',  roll: 45, marks: 55 },
 ];
 
-const totalmarks = students.map((stu) => {
-    if(stu.marks < 60){
-        stu.marks += 20;
-    }
-    return stu;
- }).filter((stu)=>stu.marks > 60).reduce((acc,curr)=>acc + curr.marks,0);
 
-console.log(totalmarks);
+// 8.1 Names in uppercase
+const namesUpper = students.map(s => s.name.toUpperCase());
+console.log('8.1 uppercase names →', namesUpper);
 
+
+
+// 8.2 Students scoring > 60
+const aboveSixty = students.filter(s => s.marks > 60);
+console.log('8.2 marks > 60 →', aboveSixty);
+
+
+// 8.3 Score > 60 AND roll > 15
+const complexFilter = students.filter(
+  s => s.marks > 60 && s.roll > 15
+);
+console.log('8.3 marks > 60 & roll > 15 →', complexFilter);
+
+
+// 8.4 Total marks of all students
+const totalMarks = students.reduce((acc, s) => acc + s.marks, 0);
+console.log('8.4 total marks →', totalMarks);
+
+
+// 8.5 Names of students scoring > 60
+const namesAboveSixty = students
+  .filter(s => s.marks > 60)
+  .map(s => s.name);
+console.log('8.5 names > 60 →', namesAboveSixty);
+
+
+// 8.6 Add 20 to marks < 60, then total of those now > 60
+const adjustedTotal = students
+  .map(s => (s.marks < 60 ? { ...s, marks: s.marks + 20 } : s))
+  .filter(s => s.marks > 60)
+  .reduce((acc, s) => acc + s.marks, 0);
+console.log('8.6 adjusted total →', adjustedTotal);
