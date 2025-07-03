@@ -64,3 +64,39 @@ All examples are self‑contained in *`app.js`*
 array.map((value, index, array) => newValue)
 array.filter((value, index, array) => Boolean)
 array.reduce((acc, value, index, array) => newAcc, initialValue)
+
+
+
+
+# ⚡ JavaScript Functions: Declarations, Expressions, Closures, Hoisting & More
+---
+
+## 📚 Topics Covered
+
+1. ✅ Function Declarations vs Expressions  
+2. ✅ First-Class Functions  
+3. ✅ Immediately Invoked Function Expressions (IIFEs)  
+4. ✅ Closures (with output-based examples)  
+5. ✅ Scope, `let`, and `setTimeout` behavior  
+6. ✅ Function Hoisting  
+7. ✅ Parameters vs Arguments, Rest vs Spread  
+8. ✅ Callback Functions  
+9. ✅ Arrow Functions vs Regular Functions  
+
+All examples are written inside **`app.js`** 
+
+---
+
+## 🧠 Quick Reference Table
+
+| 🧩 Topic                     | 📌 Key Point                                                                                  |
+|-----------------------------|----------------------------------------------------------------------------------------------|
+| Declaration vs Expression   | Declarations are hoisted, expressions are not.                                               |
+| First-Class Functions       | Functions can be assigned to variables, passed as arguments, and returned from other functions. |
+| IIFE                        | `(function() { ... })();` Runs immediately, avoids polluting global scope.                   |
+| Closure                     | An inner function retains access to outer variables even after the outer function completes. |
+| Hoisting                    | Declarations hoisted with full definition; `var` is hoisted as `undefined`.                 |
+| Rest vs Spread              | `...args` gathers parameters; `f(...arr)` spreads them.                                     |
+| Arrow vs Regular Functions  | Arrow functions have no `this` or `arguments`, and use concise syntax.                      |
+
+---
