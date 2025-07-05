@@ -100,3 +100,40 @@ All examples are written inside **`app.js`**
 | Arrow vs Regular Functions  | Arrow functions have no `this` or `arguments`, and use concise syntax.                      |
 
 ---
+
+# 🔄 JavaScript Event Propagation, Bubbling, Capturing & Delegation
+
+## 📚 Topics Covered
+
+| # | Topic |
+|---|-------|
+| 1 | Event Propagation Overview |
+| 2 | Event Bubbling |
+| 3 | `event.target` vs `event.currentTarget` vs `this` |
+| 4 | Event Capturing / Trickling |
+| 5 | Stopping Propagation |
+| 6 | Event Delegation |
+| 7 | Output‑based Question |
+| 8 | Modal Example (click outside to close) |
+
+All runnable examples are collected in **`app.js`** (or embed them directly into an HTML file).
+
+---
+
+## 1. Event Propagation
+
+Event propagation defines **how events travel** through the DOM tree (capture → target → bubble).
+It determines the order in which handlers fire when elements are nested.
+
+---
+
+## 2. Event Bubbling
+
+const div    = document.getElementById("Div");
+const form   = document.getElementById("Form");
+const button = document.getElementById("Button");
+
+div.addEventListener   ("click", () => alert("DIV BLOCK"));
+form.addEventListener  ("click", () => alert("FORM BLOCK"));
+button.addEventListener("click", () => alert("BUTTON BLOCK"));
+
