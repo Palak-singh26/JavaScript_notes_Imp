@@ -137,3 +137,50 @@ div.addEventListener   ("click", () => alert("DIV BLOCK"));
 form.addEventListener  ("click", () => alert("FORM BLOCK"));
 button.addEventListener("click", () => alert("BUTTON BLOCK"));
 
+
+# 🔁 JavaScript Currying – Interview Notes & Practice
+---
+
+## 📌 Topics Covered
+
+1. What is Currying?
+2. Why Use Currying? (Benefits & Use Cases)
+3. Difference Between Currying and Partial Application
+4. Infinite Currying
+5. DOM Manipulation with Curried Functions
+6. Custom `curry()` Implementation
+7. Output-Based Questions
+
+---
+
+## 📂 File
+
+- `currying.js`: Contains all examples with step-by-step comments and logic flow.
+
+---
+
+## ✅ Quick Summary
+
+| Concept                  | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| Currying                 | Transforming `f(a, b)` to `f(a)(b)` — a function returning another function |
+| Arity                    | Number of arguments a function expects                                      |
+| Partial Application      | Fixing some arguments of a function and returning a new one                 |
+| Infinite Currying        | A function that keeps returning another function until a base case is met   |
+| curry() utility          | Custom implementation to transform any multi-arg function to curried form   |
+
+---
+
+## ⚙️ Usage Examples
+
+```js
+// Basic currying
+function sum(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(sum(2)(6)(1)); // 9
