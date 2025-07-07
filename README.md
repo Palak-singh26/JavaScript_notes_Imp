@@ -184,3 +184,34 @@ function sum(a) {
 }
 
 console.log(sum(2)(6)(1)); // 9
+
+
+
+# 📘 JavaScript Objects Quick Reference
+
+A short and practical reference for understanding JavaScript objects.
+
+---
+
+## 📌 Topics
+
+* What is an object in JS
+* Built-in Objects
+* Browser-specific Objects
+* Custom Objects
+* Deleting Properties
+* Computed Properties
+* Looping Objects
+* Duplicate Keys
+* JSON.stringify & JSON.parse
+* Spread Operator
+* Destructuring
+* Object References
+* Object Comparison
+* Object Mutation
+* Shallow Copy
+* Deep Copy
+* Ways to Clone an Object
+
+
+👩‍💻 Author: Palak Singh
