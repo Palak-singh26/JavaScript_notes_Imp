@@ -214,4 +214,28 @@ A short and practical reference for understanding JavaScript objects.
 * Ways to Clone an Object
 
 
-👩‍💻 Author: Palak Singh
+
+
+# 📘 JavaScript this Keyword Quick Reference
+
+
+A short and practical guide to understanding the this keyword in JavaScript.
+
+
+📌 Topics Covered
+
+🔹 What is this in JavaScript
+
+✋ Implicit Binding
+
+✍️ Explicit Binding (call, apply)
+
+🧠 Arrow Functions and this
+
+📦 Method Context (object.method())
+
+⏱ this in setTimeout and Callbacks
+
+🔁 Chaining Methods using this
+
+🔍 Common this Behavior in Objects and Functions
