@@ -239,3 +239,29 @@ A short and practical guide to understanding the this keyword in JavaScript.
 🔁 Chaining Methods using this
 
 🔍 Common this Behavior in Objects and Functions
+
+
+
+
+
+# 🧠 JavaScript `call`, `apply`, and `bind` — Examples & Explanations
+
+This guide demonstrates how `call()`, `apply()`, and `bind()` work in JavaScript with real-world examples and clear explanations.
+
+---
+
+## 📌 Table of Contents
+
+1. [What is `call()`](#1-what-is-call)
+2. [What is `apply()`](#2-what-is-apply)
+3. [What is `bind()`](#3-what-is-bind)
+4. [Q1: Using `call` and `bind`](#4-q1-using-call-and-bind)
+5. [Q2: Function Inside Object](#5-q2-function-inside-object)
+6. [Q3: `this` with setTimeout](#6-q3-this-with-settimeout)
+7. [Q4: `call` in Loop with Objects](#7-q4-call-in-loop-with-objects)
+8. [Q5: Append Arrays Using `apply`](#8-q5-append-arrays-using-apply)
+9. [Q6: Math.min/Math.max with Apply](#9-q6-mathminmathmax-with-apply)
+10. [Q7: Bound Function](#10-q7-bound-function)
+11. [Q8: `bind` Chaining](#11-q8-bind-chaining)
+
+---
