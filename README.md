@@ -265,3 +265,39 @@ This guide demonstrates how `call()`, `apply()`, and `bind()` work in JavaScript
 11. [Q8: `bind` Chaining](#11-q8-bind-chaining)
 
 ---
+
+
+# 🧠 JavaScript Event Propagation: Bubbling, Capturing & Delegation
+
+A complete explanation with examples on how events travel in the DOM using bubbling, capturing, and delegation. Covers event target handling, stopping propagation, and practical modal behavior.
+
+---
+
+## 📌 Table of Contents
+
+1. [What is Event Propagation?](#1-what-is-event-propagation)
+2. [Event Bubbling](#2-event-bubbling)
+3. [event.target vs this vs event.currentTarget](#3-eventtarget-vs-this-vs-eventcurrenttarget)
+4. [Event Capturing (Trickling)](#4-event-capturing-trickling)
+5. [Stop Bubbling or Capturing](#5-stop-bubbling-or-capturing)
+6. [Event Delegation](#6-event-delegation)
+7. [Q7: Mixed Capture and Bubble Output](#7-q7-mixed-capture-and-bubble-output)
+8. [Q8: Modal Close on Background Click](#8-q8-modal-close-on-background-click)
+
+---
+
+## ❓ 1. What is Event Propagation?
+
+**Event propagation** is the process that defines how events flow through the DOM.  
+It determines the order in which elements receive the event: from top to bottom (capturing) or bottom to top (bubbling).
+
+---
+
+## ❓ 2. Event Bubbling
+
+**Event bubbling** means the event starts at the target element and moves **upward** through its ancestors.
+
+```js
+div.addEventListener("click", () => alert("DIV BLOCK"));
+form.addEventListener("click", () => alert("FORM BLOCK"));
+button.addEventListener("click", () => alert("BUTTON BLOCK"));
