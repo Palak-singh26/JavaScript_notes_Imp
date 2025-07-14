@@ -301,3 +301,116 @@ It determines the order in which elements receive the event: from top to bottom 
 div.addEventListener("click", () => alert("DIV BLOCK"));
 form.addEventListener("click", () => alert("FORM BLOCK"));
 button.addEventListener("click", () => alert("BUTTON BLOCK"));
+
+
+
+# 📘 JavaScript Promises 
+
+This document provides a comprehensive guide to **JavaScript Promises**, including polyfills, combinators, etc
+
+---
+
+## 📌 Table of Contents
+
+* [What is a Promise?](#what-is-a-promise)
+* [Synchronous vs Asynchronous](#synchronous-vs-asynchronous)
+* [Callback Hell](#callback-hell)
+* [Creating Promises](#creating-promises)
+* [Promise Chaining](#promise-chaining)
+* [Promise Combinators](#promise-combinators)
+* [Async/Await](#asyncawait)
+* [Recursive Promises](#recursive-promises)
+* [Promise Polyfill](#promise-polyfill)
+* [Promise.all Polyfill](#promiseall-polyfill)
+* [Author](#author)
+
+---
+
+## ❓ What is a Promise?
+A **Promise** in JavaScript represents a value that may be available now, or in the future, or never. It helps manage asynchronous operations more cleanly than callbacks.
+
+```js
+let promise = new Promise((resolve, reject) => {
+  // async task
+});
+```
+
+---
+
+## 🕐 Synchronous vs Asynchronous
+
+### Synchronous Example
+
+```js
+console.log("start");
+console.log("subscribe to Palak's channel");
+console.log("finish");
+```
+
+### Asynchronous Example
+
+```js
+console.log("subscribe to Palak's channel");
+setTimeout(() => console.log("hellooooooo"), 0);
+console.log("finish");
+```
+
+---
+
+## 🔁 Callback Hell
+
+```js
+function hallchall(rishtedar, cb) {
+  setTimeout(() => cb(`Pasand karo ${rishtedar}`), 1000);
+}
+function aaoristedar(video, cb) {
+  setTimeout(() => cb(`AAIYE ghar pr ${video}`), 1000);
+}
+function jaoristedar(image, cb) {
+  setTimeout(() => cb(`Bhej denge sare ${image}`), 1000);
+}
+```
+
+---
+
+## ✅ Creating Promises
+```js
+function important(username) {
+  return new Promise((resolve, reject) => {
+    resolve(`Subscribe to ${username}`);
+  });
+}
+```
+
+---
+
+## 🔗 Promise Chaining
+
+```js
+important("Palak's channel")
+  .then(res => console.log(res))
+  .then(() => like("video"))
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+```---
+
+## 🔗 Promise Combinators
+
+### 1. `Promise.all`
+
+Resolves all or rejects on the first rejection.
+
+### 2. `Promise.race`
+
+Returns the first resolved or rejected promise.
+
+### 3. `Promise.allSettled`
+
+Returns status + result for all promises.
+
+### 4. `Promise.any`
+
+Returns first **fulfilled** promise. Rejects only if **all** promises reject.
+
+---
+
