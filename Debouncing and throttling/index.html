@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promisise</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:sans-serif;
+      }
+      body{
+          background:#135576;
+      }
+        .btn{
+               width: 200px;
+               margin: 100px 40px 30px;
+               height: 50px;
+               color: #fff;
+               background: linear-gradient(45deg,#9e3434,#221d83);
+               cursor: pointer;
+               border-radius: 10%;
+               font-size: 20px;
+        }
+        .btn:hover{
+          background: linear-gradient(45deg,#349e4f,#221d83);
+        }
+         p {
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 20px 0;
+            margin: 10px 20px ;
+            color: #fff;
+        }
+        .inc-press ,.inc-count{
+          padding: 20px;
+          cursor: pointer;
+        }
+        .inc-count:hover{
+          color: #9e3434;
+        }
+        .inc-press:hover{
+          color: #9e3434;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+<body>
+       <button class="btn"> increment</button>
+          <p>Button <span class="inc-press">0</span>Times</p>
+          <p>Triggered <span class="inc-count">0</span>Times</p>
+
+
+
+      <script src="/app.js"></script>
+      
+</body>
+</html>
