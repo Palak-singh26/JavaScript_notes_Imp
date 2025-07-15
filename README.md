@@ -414,3 +414,38 @@ Returns first **fulfilled** promise. Rejects only if **all** promises reject.
 
 ---
 
+
+ # 🔁 Debouncing and Throttling Practice – JavaScript
+
+This project demonstrates the difference between **debouncing** and **throttling** using JavaScript. It's designed to help you understand how event-limiting techniques work in real-world UI situations like button clicks.
+
+---
+
+## 📌 What’s Covered
+
+### ✅ Debouncing
+- Waits for **user inactivity** before executing a function.
+- Used in:
+  - Search inputs
+  - Resize events
+  - Button click optimization
+
+### ✅ Throttling
+- Limits how often a function executes over time, regardless of frequency.
+- Used in:
+  - Scroll events
+  - Repeated click handling
+  - Window resizing
+
+---
+
+## 💡 What You’ll Learn
+
+| Question | What It Solves | Method Used |
+|---------|----------------|--------------|
+| Q1 | Show total button clicks immediately, trigger action after 800ms of no clicks | `_.debounce` |
+| Q2 | Show total button clicks, throttle action to run once every 800ms | `_.throttle` |
+| Q3 | Custom debounce implementation (without Lodash) | `mydebounced()` |
+| Q4 | Custom throttle implementation (without Lodash) | `mythrottle()` |
+
+---
